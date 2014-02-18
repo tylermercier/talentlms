@@ -1,6 +1,11 @@
 # Talentlms
 
-TODO: Write a gem description
+Ruby gem for the [Talent LMS API](http://www.talentlms.com)
+
+## Status
+[![Gem Version](https://badge.fury.io/rb/talentlms.png)](http://badge.fury.io/rb/talentlms)
+[![Build Status](https://secure.travis-ci.org/tylermercier/talentlms.png)](http://travis-ci.org/tylermercier/talentlms)
+[![Code Climate](https://codeclimate.com/github/tylermercier/talentlms.png)](https://codeclimate.com/github/tylermercier/talentlms)
 
 ## Installation
 
