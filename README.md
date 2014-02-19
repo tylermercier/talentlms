@@ -23,78 +23,78 @@ Or install it yourself as:
 
 ## Usage
 
-    @client = TalentLMS::Client.new({
+    TalentLMS.init({
       :api_key => '03a82de6de2d939564aa607b0e24a030b5047c54ed87c77fea',
       :sub_domain => 'example'
     })
 
-    @client.users
+    TalentLMS.users
 
-    @client.users(:id => 1)
+    TalentLMS.users(:id => 1)
 
-    @client.users(:email => 'tyler@example.com')
+    TalentLMS.users(:email => 'tyler@example.com')
 
-    @client.courses
+    TalentLMS.courses
 
-    @client.courses(:id => 1)
+    TalentLMS.courses(:id => 1)
 
-    @client.categories
+    TalentLMS.categories
 
-    @client.categories(:id => 1)
+    TalentLMS.categories(:id => 1)
 
-    @client.groups
+    TalentLMS.groups
 
-    @client.groups(:id => 1)
+    TalentLMS.groups(:id => 1)
 
-    @client.branches
+    TalentLMS.branches
 
-    @client.branches(:id => 1)
+    TalentLMS.branches(:id => 1)
 
-    @client.siteinfo
+    TalentLMS.siteinfo
 
-    @client.siteinfo
+    TalentLMS.siteinfo
 
-    @client.userlogin
+    TalentLMS.userlogin
 
-    @client.userlogout
+    TalentLMS.userlogout
 
-    @client.usersignup
+    TalentLMS.usersignup
 
-    @client.usersetstatus(:user_id =>1, status => 'complete')
+    TalentLMS.usersetstatus(:user_id =>1, status => 'complete')
 
-    @client.forgotusername(email => 'tyler@example.com', domain_url => 'http://www.example.com/login')
+    TalentLMS.forgotusername(email => 'tyler@example.com', domain_url => 'http://www.example.com/login')
 
-    @client.forgotpassword(username => 'tyler', domain_url => 'http://www.example.com', redirect_url => 'http://www.example.com/login')
+    TalentLMS.forgotpassword(username => 'tyler', domain_url => 'http://www.example.com', redirect_url => 'http://www.example.com/login')
 
-    @client.addusertocourse
+    TalentLMS.addusertocourse
 
-    @client.addusertobranch(:user_id => 1, :branch_id => 111)
+    TalentLMS.addusertobranch(:user_id => 1, :branch_id => 111)
 
-    @client.addcoursetobranch(:course_id => 1, :branch_id => 111)
+    TalentLMS.addcoursetobranch(:course_id => 1, :branch_id => 111)
 
-    @client.addusertogroup(:user_id => 1, :group_key => 12)
+    TalentLMS.addusertogroup(:user_id => 1, :group_key => 12)
 
-    @client.removeuserfromgroup(:user_id => 1, :group_id => 12)
+    TalentLMS.removeuserfromgroup(:user_id => 1, :group_id => 12)
 
-    @client.addcoursetogroup(:course_id => 1, :group_id => 12)
+    TalentLMS.addcoursetogroup(:course_id => 1, :group_id => 12)
 
-    @client.gotocourse(:user_id => 1, :course_id => 1)
+    TalentLMS.gotocourse(:user_id => 1, :course_id => 1)
 
-    @client.buycourse
+    TalentLMS.buycourse
 
-    @client.buycategorycourses
+    TalentLMS.buycategorycourses
 
-    @client.getcustomregistrationfields
+    TalentLMS.getcustomregistrationfields
 
-    @client.categoryleafsandcourses(:id => 3)
+    TalentLMS.categoryleafsandcourses(:id => 3)
 
-    @client.getusersprogressinunits(:unit_id => 56, :user_id => 1)
+    TalentLMS.getusersprogressinunits(:unit_id => 56, :user_id => 1)
 
-    @client.creategroup
+    TalentLMS.creategroup
 
-    @client.createbranch
+    TalentLMS.createbranch
 
-    @client.ratelimit
+    TalentLMS.ratelimit
 
 ## Contributing
 
