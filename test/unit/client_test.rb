@@ -9,6 +9,22 @@ describe 'Client' do
     })
   end
 
+  describe '#initialize' do
+    it 'api_key is a required field' do
+      err = -> {
+        TalentLMS::Client.new(:sub_domain => '')
+      }.must_raise ArgumentError
+      err.message.must_match /api_key/
+    end
+
+    it 'subdomain is a required field' do
+      err = -> {
+        TalentLMS::Client.new(:api_key => '')
+      }.must_raise ArgumentError
+      err.message.must_match /sub_domain/
+    end
+  end
+
   describe '#auth_header' do
     it 'adds auth header without white space' do
       expected = 'Basic MDNhODJkZTZkZTJkOTM5NTY0YWE2MDdiMGUyNGEwMzBiNTA0N2M1NGVkODdjNzdmZWE6'
