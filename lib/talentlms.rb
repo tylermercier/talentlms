@@ -5,7 +5,7 @@ module TalentLMS
   extend self
 
   def init(options={})
-    @@client = TalentLMS::Client.new(options)
+    @@client = Client.new(options)
   end
 
   def method_missing(method, *args, &block)
