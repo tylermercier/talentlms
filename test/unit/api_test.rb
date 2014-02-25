@@ -44,6 +44,9 @@ describe 'API' do
       .with(:headers => @headers)
       .to_return(:status => 200, :body => error_message, :headers => {})
 
-    assert_raises(ApiError) { TalentLMS.courses(:id => 5) }
+    err = -> {
+      TalentLMS.courses(:id => 5)
+    }.must_raise TalentLMS::ApiError
+    err.message.must_match /Invalid arguments provided/
   end
 end
