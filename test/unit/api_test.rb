@@ -37,4 +37,13 @@ describe 'API' do
     expected = {"id" => 5}
     assert_equal expected, TalentLMS.courses(:id => 5)
   end
+
+  it 'throws exception with details on error' do
+    error_message = "{\"error\":{\"type\": \"invalid_request_error\", \"message\": \"Invalid arguments provided\"}}"
+    stub_request(:get, "https://example.talentlms.com/api/v1/courses/id:5")
+      .with(:headers => @headers)
+      .to_return(:status => 200, :body => error_message, :headers => {})
+
+    assert_raises(ApiError) { TalentLMS.courses(:id => 5) }
+  end
 end
